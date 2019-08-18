@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- 改顏色 <link rel="stylesheet" href="/static/style.css"> -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">User100.01(p)</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">首頁</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col-md-7" style="padding:40px">
+        <img class="img-responsive img-rounded" src="static/a.jpg">
+      </div>
+      <div class="col-md-4">
+        <h1><span class="glyphicon glyphicon-user"><span>戰車介紹</h1> 
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>介紹</th>            
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>姓名</td>
+              <td>KV-2</td>
+            </tr>
+            <tr>
+              <td>階級</td>
+              <td>VI</td>
+            </tr>
+            <tr>
+              <td>戰車類型</td>
+              <td>重型戰車</td>
+            </tr>
+          </tbody>  
+        </table>
+      </div> 
+    </div>
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="success">分類</th>
+              <th class="info">篇數</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in cat %}
+            <tr>
+              <td>{{ c[0] }}</td>
+              <td><a href="/category/{{ c[0] }}">{{ c[1] }}</a></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </body>
+</html>

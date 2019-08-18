@@ -2,7 +2,7 @@
 
 ## 專案介紹
 
-我就是想做個網站!!!
+我的第一個網站!!!
 [網站網址(host by Heroku)](https://pythondiary1218.herokuapp.com/)
 
 ## 成品展示
